@@ -43,13 +43,14 @@
   </div>
 
   <script>
-	  function () {
+	  function scrolled() {
 	  	const images = document.querySelectorAll('img');
 		images.forEach(image =>{
 			image.classList.add('active');
-			debounce();
 		})
 	  }
+
+	  debounce(scrolled,wait = 20,immediate = true)
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
