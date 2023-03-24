@@ -43,6 +43,13 @@
   </div>
 
   <script>
+	  function () {
+	  	const images = document.querySelectorAll('img');
+		images.forEach(image =>{
+			image.classList.add('active');
+			debounce();
+		})
+	  }
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
